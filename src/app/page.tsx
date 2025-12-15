@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
 import NavbarLayoutFloatingInline from '@/components/navbar/NavbarLayoutFloatingInline';
@@ -7,7 +7,7 @@ import TagMediaSplitAbout from '@/components/sections/about/TagMediaSplitAbout';
 import FeatureCardTen from '@/components/sections/feature/FeatureCardTen';
 import MetricCardOne from '@/components/sections/metrics/MetricCardOne';
 import TeamCardNine from '@/components/sections/team/TeamCardNine';
-import TestimonialCardSix from '@/components/sections/testimonial/TestimonialCardSix';
+import ProductCardThree from '@/components/sections/product/ProductCardThree';
 import ContactParallax from '@/components/sections/contact/ContactParallax';
 import FooterBaseSocial from '@/components/sections/footer/FooterBaseSocial';
 import { Rocket, Target, Lightbulb, Zap, Award, Users, Quote, CheckCircle, TrendingUp, Network, Briefcase, Globe, DollarSign, Star, BarChart3, Linkedin, Twitter, Mail, Youtube } from "lucide-react";
@@ -206,63 +206,65 @@ export default function LandingPage() {
       </div>
 
       <div id="testimonials" data-section="testimonials">
-        <TestimonialCardSix
-          title="Portfolio Company Success"
-          description="Hear from founders who partnered with Fresh Fund to scale their vision globally."
-          tag="Testimonials"
-          tagIcon={Quote}
+        <ProductCardThree
+          title="Portfolio Companies"
+          description="Meet the innovative companies we're backing and scaling globally."
+          tag="Our Portfolio"
+          tagIcon={Briefcase}
           textboxLayout="default"
           animationType="slide-up"
           useInvertedBackground="noInvert"
-          speed={30}
-          testimonials={[
+          carouselMode="buttons"
+          gridVariant="uniform-all-items-equal"
+          containerStyle="default"
+          products={[
             {
               id: "1",
-              name: "Yair Shahar",
-              handle: "Founder, CloudSecure",
-              testimonial: "Fresh Fund's investment was transformational. Beyond capital, their network opened doors across EMEA and Asia. We scaled from 10M to 500M ARR in 3 years.",
+              name: "CloudSecure",
+              price: "Series B",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1765794719565-xrqr49pe.jpg",
-              imageAlt: "Yair Shahar"
+              imageAlt: "CloudSecure - Enterprise security platform",
+              initialQuantity: 1
             },
             {
               id: "2",
-              name: "Noa Bergman",
-              handle: "CEO, QuantumML",
-              testimonial: "The team at Fresh Fund truly understands deeptech. They provided strategic guidance on go-to-market and connected us with key customers in our space.",
+              name: "QuantumML",
+              price: "Series A",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1765794720207-6mh8hg2c.jpg",
-              imageAlt: "Noa Bergman"
+              imageAlt: "QuantumML - Machine learning infrastructure",
+              initialQuantity: 1
             },
             {
               id: "3",
-              name: "Alon Turgeman",
-              handle: "Co-Founder, DataFlow",
-              testimonial: "Fresh Fund's hands-on approach and operational experience accelerated our product-market fit by 18 months. They're investors who truly roll up their sleeves.",
+              name: "DataFlow",
+              price: "Series B",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1765794720974-wlbdghew.jpg",
-              imageAlt: "Alon Turgeman"
+              imageAlt: "DataFlow - Real-time data platform",
+              initialQuantity: 1
             },
             {
               id: "4",
-              name: "Meirav Zuckerman",
-              handle: "Founder, HealthTech AI",
-              testimonial: "As a female founder in deeptech, Fresh Fund's diverse team and inclusive approach made all the difference. We felt truly supported at every stage.",
+              name: "HealthTech AI",
+              price: "Series A",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1765794721921-0fdfubx5.jpg",
-              imageAlt: "Meirav Zuckerman"
+              imageAlt: "HealthTech AI - Healthcare analytics",
+              initialQuantity: 1
             },
             {
               id: "5",
-              name: "Omer Katz",
-              handle: "CEO, FinTech Innovations",
-              testimonial: "Fresh Fund invested in our Series A and their follow-on commitment through Series C shows confidence. They're long-term partners, not just capital providers.",
+              name: "FinTech Innovations",
+              price: "Series C",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1765794722806-o5fwc28i.jpg",
-              imageAlt: "Omer Katz"
+              imageAlt: "FinTech Innovations - Payment solutions",
+              initialQuantity: 1
             },
             {
               id: "6",
-              name: "Tal Reiss",
-              handle: "Founder, CyberShield Labs",
-              testimonial: "The intros alone paid for the investment 10x over. Fresh Fund's reputation in the Israeli tech ecosystem is unmatched. Best decision we made.",
+              name: "CyberShield Labs",
+              price: "Series B",
               imageSrc: "https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_34YrpHTNyoPHUh85bjA10KHfDge/uploaded-1765794723461-td6d3bhm.jpg",
-              imageAlt: "Tal Reiss"
+              imageAlt: "CyberShield Labs - Cybersecurity platform",
+              initialQuantity: 1
             }
           ]}
         />
